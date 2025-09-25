@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Label Text Animation</title>
+    <link rel="stylesheet" href="css_001.css">
+</head>
+
+<body>
+    <div class="input-box">
+        <input required="" type="text" class="input" id="emailInput">
+        <label class="email-label">
+            <span class="char" style="--index: 0; padding-left: 5px;" >E</span>
+            <span class="char" style="--index: 1">m</span>
+            <span class="char" style="--index: 2">a</span>
+            <span class="char" style="--index: 3">i</span>
+            <span class="char" style="--index: 4; padding-right: 5px;">l</span>
+        </label>
+    </div>
+    <div class="wrapper">
+        <div class="box">
+            <div class="circle shimmer" id="circle-o"></div>
+            <div class="rectangle shimmer" id="rectangle-o"></div>
+        </div>
+    </div>
+<script src="css_001.js"></script>
+</body>

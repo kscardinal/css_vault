@@ -1,0 +1,117 @@
+/* Input Label Text Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    background: #e8e8e8;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-box .input {
+    font-size: 16px;
+    outline: none;
+    padding: 10px 15px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-radius: 7px;
+    border: 2px solid #999;
+    background: transparent;
+}
+
+.input-box .input:focus,
+.input-box .input:valid {
+    border-color: #3679ff;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box .email-label {
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 12px;
+    display: flex;
+}
+
+.input-box .char {
+    transition: .2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.input-box .input:focus~label .char,
+.input-box .input:valid~label .char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #3679ff;
+    background: #e8e8e8;
+}
+
+#emailInput {
+  transition: border-color 0.4s ease;
+}
+
+/* ------------------------------------------------------- */
+
+.wrapper {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+    padding: 10px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.shimmer {
+    opacity: 1;
+    background: linear-gradient(100deg,
+            #ededed 30%,
+            #dcdcdc 50%,
+            #ededed 70%);
+    background-size: 400%;
+    animation: shimmer 1.5s infinite linear;
+    transition: opacity 0.4s ease;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.rectangle {
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 100% 100%;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}

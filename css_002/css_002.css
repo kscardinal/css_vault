@@ -12,26 +12,42 @@ body {
 
 h1 {
     font-size: 3.5em;
+    margin: 0 5%;
 }
 
 h1 > span {
     position: relative;
     display: inline-block;
-    color: #FF8800;
+    color: #C32026;
     height: 1.25em;
     vertical-align: bottom;
     overflow: hidden;
 }
 
-h1 > span > span {
+h1 > span.scroll-1 > span {
     display: block;
-    animation: animateWords 5s infinite ease;
+    animation: animateWords-1 5s infinite ease;
 }
-@keyframes animateWords {
+
+h1 > span.scroll-2 > span {
+    display: block;
+    animation: animateWords-2 5s infinite ease;
+}
+
+@keyframes animateWords-1 {
     0% {transform: translateY(0%);}
     20% {transform: translateY(-100%);}
     40% {transform: translateY(-200%);}
     60% {transform: translateY(-300%);}
     80% {transform: translateY(-400%);}
-    100% {transform: translateY(-400%);}
+    100% {transform: translateY(-500%);}
+}
+
+@keyframes animateWords-2 {
+    0% {transform: translateY(0%);}
+    20% {transform: translateY(-100%);}
+    40% {transform: translateY(-200%);}
+    60% {transform: translateY(-300%);}
+    80% {transform: translateY(-400%);}
+    100% {transform: translateY(0%);}
 }
